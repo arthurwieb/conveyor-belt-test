@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://djhyhopjgm0xd"]
+
+[ext_resource type="PackedScene" uid="uid://lxr2ml45vbjj" path="res://scenes/items/iron_ore.tscn" id="1_f5dr2"]
+[ext_resource type="PackedScene" uid="uid://c4pfknkog3cb2" path="res://scenes/belts/conveyor_belt_up.tscn" id="1_xx3ga"]
+
+[node name="Test_World" type="Node2D"]
+
+[node name="iron_ore" parent="." instance=ExtResource("1_f5dr2")]
+position = Vector2(5, 142)
+
+[node name="Belts" type="Node2D" parent="."]
+
+[node name="ConveyorBeltUp2" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, -32)
+
+[node name="ConveyorBeltUp" parent="Belts" instance=ExtResource("1_xx3ga")]
+
+[node name="ConveyorBeltUp3" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, -96)
+
+[node name="ConveyorBeltUp4" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, -64)
+
+[node name="ConveyorBeltUp5" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, 97)
+
+[node name="ConveyorBeltUp6" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, 129)
+
+[node name="ConveyorBeltUp7" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, 33)
+
+[node name="ConveyorBeltUp8" parent="Belts" instance=ExtResource("1_xx3ga")]
+position = Vector2(0, 65)
+
+[node name="Camera2D" type="Camera2D" parent="."]
