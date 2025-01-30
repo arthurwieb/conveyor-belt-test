@@ -122,3 +122,6 @@ frame_progress = 0.24652
 shape = SubResource("RectangleShape2D_7do0n")
 
 [node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_shape_exited" from="." to="." method="_on_body_shape_exited"]
