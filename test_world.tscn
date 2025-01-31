@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djhyhopjgm0xd"]
+[gd_scene load_steps=4 format=3 uid="uid://djhyhopjgm0xd"]
 
 [ext_resource type="PackedScene" uid="uid://lxr2ml45vbjj" path="res://scenes/items/iron_ore.tscn" id="1_f5dr2"]
 [ext_resource type="PackedScene" uid="uid://c4pfknkog3cb2" path="res://scenes/belts/conveyor_belt_up.tscn" id="1_xx3ga"]
-[ext_resource type="Script" path="res://area_2d.gd" id="3_57vnr"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcosi"]
-size = Vector2(41, 42)
+[ext_resource type="PackedScene" uid="uid://chahwlufhx04y" path="res://scenes/mines/iron_mine.tscn" id="3_bpy2o"]
 
 [node name="Test_World" type="Node2D"]
 
@@ -22,11 +19,5 @@ position = Vector2(0, 129)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-2, 36)
-script = ExtResource("3_57vnr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_tcosi")
-
-[connection signal="body_entered" from="Area2D" to="iron_ore" method="_on_area_2d_body_entered"]
+[node name="IronMine" parent="." instance=ExtResource("3_bpy2o")]
+position = Vector2(140, -5)

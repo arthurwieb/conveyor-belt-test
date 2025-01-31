@@ -17,11 +17,5 @@ func _physics_process(delta):
 var overlapping_bodies := []
 
 func _on_body_entered(body: Node2D):
-    print('body entered')
     if body.has_method("move_on_conveyor"):
         overlapping_bodies.append(body)
-
-
-func _on_body_exited(body: Node2D) -> void:
-    print('body')
-    pass # Replace with function body.
